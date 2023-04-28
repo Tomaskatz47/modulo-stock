@@ -1,0 +1,42 @@
+@startuml
+
+abstract class Producto{
+-String: descripcion
++number: precio()
++number: stock()
+}
+
+interface Aplicable extends Producto{
+-Producto: producto
++number: precio()
++number: stock()
+
+}
+class DescuentoFijo extends Aplicable {
++number: precio()
+}
+class Packaging extends Producto{
++number: precio()
+}
+
+Class ProductoSimple extends Aplicable {
+-number: precio
+-number: stock
+
++number: precio()
++number: stock()
+}
+
+
+Class Combo extends Producto{
+-ArrayList: list[Producto]
+
+
+
++number: precio()
++number: stock()
+}
+
+
+
+@enduml
